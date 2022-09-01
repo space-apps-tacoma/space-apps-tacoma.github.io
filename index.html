@@ -29,7 +29,7 @@
     }
     main{
       background-image: url('assets/images/Horsehead_Chatzifrantzis_1080.jpg');
-      height: 190px;
+      height: 195px;
 
     }
 </style>
@@ -93,59 +93,117 @@
 
 
 
-            <div class="container-fluid"> <!-- quick search -->
+            <div class="container-fluid mb-3"> <!-- quick search -->
                 <h3 id="quick-search" >Quick Search</h3>
 
                 <script async src="https://cse.google.com/cse.js?cx=eeb821dc71e20327f"></script>
                 <div class="gcse-search"></div>
-
-                <p class="col-md-8 fs-4 mt-2">This custom search queries all of the following links at once:</p>
-                <ul>
-                  <li><a href="https://2014.spaceappschallenge.org/awards/" target="_new">2014.spaceappschallenge.org/awards/</a></li>
-                  <li><a href="https://2015.spaceappschallenge.org/awards/" target="_new">2015.spaceappschallenge.org/awards/</a></li>
-                  <li><a href="https://2016.spaceappschallenge.org/awards/" target="_new">2016.spaceappschallenge.org/awards/</a></li>
-                  <li><a href="https://2017.spaceappschallenge.org/awards/" target="_new">2017.spaceappschallenge.org/awards/</a></li>
-                  <li><a href="https://2018.spaceappschallenge.org/awards/" target="_new">2018.spaceappschallenge.org/awards/</a></li>
-                  <li><a href="https://2019.spaceappschallenge.org/awards/" target="_new">2019.spaceappschallenge.org/awards/</a></li>
-                  <li><a href="https://2020.spaceappschallenge.org/awards/" target="_new">2020.spaceappschallenge.org/awards/</a></li>
-                  <li><a href="https://2021.spaceappschallenge.org/awards/" target="_new">2021.spaceappschallenge.org/awards/</a></li>
-                  <li><a href="https://2022.spaceappschallenge.org/awards/" target="_new">2022.spaceappschallenge.org/awards/</a></li>
-                </ul>
-
-                <p class="">Some keywords from the Global winners category that
-                            are likely to return results:</p>
-                <ul>
-                  <li>asteriod</li>
-                  <li>art</li>
-                  <li>best</li>
-                  <li>data</li>
-                  <li>food</li>
-                  <li>galactic</li>
-                  <li>hardware</li>
-                  <li>honorable</li>
-                  <li>inspiring</li>
-                  <li>mission</li>
-                  <li>moon</li>
-                  <li>people</li>
-                  <li>planet</li>
-                  <li>robots</li>
-                  <li>science</li>
-                  <li>storytelling</li>
-                  <li>sun</li>
-                  <li>winner</li>
-                </ul>
-
             </div><!-- /quick search -->
 
-            <p>It appears that the quick search does not allow for multiple
-                search parameters, such as finding a <em>keyword</em> and the
-                <em>teams</em> with a <em>github</em> proposal.  Also note,
-              that the routes include /awards to capture the winning proposals.
-            </p>
+
+
+                <div class="card text-bg-primary mb-3" style="max-width: 35rem;"> <!-- Quick search links -->
+                  <div class="card-body">
+
+                    <div id="search-awards-links" class="card-header h3">
+                      The quick custom search
+                      (<a class="link-light"
+                      href="https://cse.google.com"
+                      target="_blank"
+                      data-bs-toggle="tooltip"
+                      data-bs-placement="top"
+                      data-bs-title="cse.google.com"
+                      >cse</a>) above,
+                      queries all of the following
+                      links at once
+                    </div>
+                    You can also individually select each one below.
+                    <ul>
+                      <li><a href="https://2014.spaceappschallenge.org/awards/"
+                             target="_new"
+                             class="link-light">2014.spaceappschallenge.org/awards/
+                            </a></li>
+                      <li><a href="https://2015.spaceappschallenge.org/awards/"
+                            target="_new"
+                            class="link-light">2015.spaceappschallenge.org/awards/
+                          </a></li>
+                      <li><a href="https://2016.spaceappschallenge.org/awards/"
+                             target="_new"
+                             class="link-light">2016.spaceappschallenge.org/awards/
+                            </a></li>
+                      <li><a href="https://2017.spaceappschallenge.org/awards/"
+                             target="_new"
+                             class="link-light">2017.spaceappschallenge.org/awards/
+                            </a></li>
+                      <li><a href="https://2018.spaceappschallenge.org/awards/"
+                             target="_new"
+                             class="link-light">2018.spaceappschallenge.org/awards/
+                            </a></li>
+                      <li><a href="https://2019.spaceappschallenge.org/awards/"
+                             target="_new"
+                             class="link-light">2019.spaceappschallenge.org/awards/
+                            </a></li>
+                      <li><a href="https://2020.spaceappschallenge.org/awards/"
+                             target="_new"
+                             class="link-light">2020.spaceappschallenge.org/awards/
+                            </a></li>
+                      <li><a href="https://2021.spaceappschallenge.org/awards/"
+                             target="_new"
+                             class="link-light">2021.spaceappschallenge.org/awards/
+                            </a></li>
+                      <li><a href="https://2022.spaceappschallenge.org/awards/"
+                             target="_new"
+                             class="link-light">2022.spaceappschallenge.org/awards/
+                            </a></li>
+                    </ul>
+
+                    Note that the routes include /awards to capture the winning
+                    proposals.
+
+                  </div><!-- /card body -->
+                </div><!-- /Quick search links -->
+
+
+                <div class="card text-bg-primary mb-3" style="max-width: 35rem;"> <!-- keyword suggestions -->
+                  <div class="card-body">
+
+                    <div id="quick-search-keywords" class="card-header h3">
+                      Some quick search keywords from the Global winners
+                      category that are likely to return results
+                    </div>
+
+                    <ul>
+                      <li>asteriod</li>
+                      <li>art</li>
+                      <li>best</li>
+                      <li>data</li>
+                      <li>food</li>
+                      <li>galactic</li>
+                      <li>hardware</li>
+                      <li>honorable</li>
+                      <li>inspiring</li>
+                      <li>mission</li>
+                      <li>moon</li>
+                      <li>people</li>
+                      <li>planet</li>
+                      <li>robots</li>
+                      <li>science</li>
+                      <li>storytelling</li>
+                      <li>sun</li>
+                      <li>winner</li>
+                    </ul>
+
+                    <p>It appears that the quick search does not allow for multiple
+                      search parameters, such as finding a <em>keyword</em> and the
+                      teams with a <em>github</em> proposal.
+                  </p>
+                  </div><!-- /card body -->
+                </div><!-- /keyword suggestions -->
+
+
 
 
             <hr>
-
 
             <div class="card text-bg-primary mb-3" style="max-width: 35rem;"> <!-- advanced search -->
               <div class="card-body">
@@ -360,8 +418,6 @@
 
 
 
-
-            <h4>On Bing</h4>
             <!-- # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # -->
             <div class="card text-bg-primary mb-3" style="max-width: 35rem;"> <!-- example advance queries on bing -->
               <div class="card-body">
