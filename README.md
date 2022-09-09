@@ -1,2 +1,4 @@
 # space-apps-tacoma.github.io
-A place to see what the Tacoma space community is doing.
+
+A [website](https://space-apps-tacoma.github.io) with tips for
+searching the NASA Space Apps Challenge awards archive.
