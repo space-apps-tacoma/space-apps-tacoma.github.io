@@ -27,30 +27,43 @@
         font-family: 'Fira Sans', 'Overpass', 'Fira+Code', sans-serif, monospace;
         color:#FFFFFF;
     }
-    main{
+    article{
       background-image: url('assets/images/Horsehead_Chatzifrantzis_1080.jpg');
-      height: 195px;
+      height: 65px;
 
+    }
+
+    #btn-back-to-top {
+      position: fixed;
+      bottom: 20px;
+      left: 20px;
+      display: none;
+      color:#E43700;
+      background-color: #FFFFFF;
     }
 </style>
     <!-- Above Background image url https://apod.nasa.gov/apod/ap220829.html  -->
-
+    <!-- https://mdbootstrap.com/docs/standard/extended/back-to-top/ -->
 
 <body>
 
     <nav class="navbar navbar-expand-lg navbar-dark">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#">Navbar</a>
+          <a class="navbar-brand" href="#">
+            <img src="./assets/images/moon-over-mount-rainier-thumbnail.jpg" height="50" width="45">
+          </a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Award Archive</a>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Articles
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#awards-archive">Awards Archive</a></li>
+                </ul>
               </li>
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -59,18 +72,9 @@
                 <ul class="dropdown-menu">
                   <li><a class="dropdown-item" href="#quick-search">Quick</a></li>
                   <li><a class="dropdown-item" href="#advanced-search">Advanced</a></li>
-                  <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="#">Custom</a></li>
                 </ul>
               </li>
-              <li class="nav-item">
-                <a class="nav-link disabled">Disabled</a>
-              </li>
             </ul>
-            <form class="d-flex" role="search">
-              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-              <button class="btn btn-outline-success" type="submit">Search</button>
-            </form>
           </div>
         </div>
       </nav>
@@ -78,454 +82,510 @@
 
 
     <!-- # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # -->
-    <div class="container text-center">
-      <h3>NASA Space Apps Challenge Tips</h3>
+    <div class="container text-center h3">
+      NASA Space Apps Challenge Tips
     </div>
     <!-- # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # -->
 
 
 
     <main class="container">
-      <article class="blog-post">
-            <h2 class="blog-post-title mb-1">Awards Archives</h2>
+      <article id="awards-archive" class="blog-post ps-2">
+            <h2 class="blog-post-title mb-1">Searching the Awards Archive</h2>
             <p class="blog-post-meta">August 29, 2022 by <a href="https://github.com/NorthDecoder">northdecoder</a></p>
 
+            <div class="container">
+              <div class="row">
+                <div class="col">
+
+
+                  <div class="card text-bg-primary mb-3" style="max-width: 35rem;"> <!-- custom search engine -->
+                    <div class="card-body">
+
+                      <div id="quick-search" class="card-header h3">
+                        Quick Search
+                      </div>
+                      <script async src="https://cse.google.com/cse.js?cx=eeb821dc71e20327f"></script>
+                      <div class="gcse-search"></div>
+                    </div><!-- /card body -->
+                  </div><!-- /custom search engine -->
 
 
 
-            <div class="container-fluid mb-3"> <!-- quick search -->
-                <h3 id="quick-search" >Quick Search</h3>
+                  <div class="card text-bg-primary mb-3" style="max-width: 35rem;"> <!-- Quick search links -->
+                    <div class="card-body">
 
-                <script async src="https://cse.google.com/cse.js?cx=eeb821dc71e20327f"></script>
-                <div class="gcse-search"></div>
-            </div><!-- /quick search -->
-
-
-
-                <div class="card text-bg-primary mb-3" style="max-width: 35rem;"> <!-- Quick search links -->
-                  <div class="card-body">
-
-                    <div id="search-awards-links" class="card-header h3">
-                      The quick custom search
-                      (<a class="link-light"
-                      href="https://cse.google.com"
-                      target="_blank"
-                      data-bs-toggle="tooltip"
-                      data-bs-placement="top"
-                      data-bs-title="cse.google.com"
-                      >cse</a>) above,
-                      queries all of the following
-                      links at once
-                    </div>
-                    You can also individually select each one below.
-                    <ul>
-                      <li><a href="https://2014.spaceappschallenge.org/awards/"
-                             target="_new"
-                             class="link-light">2014.spaceappschallenge.org/awards/
+                      <div id="search-awards-links" class="card-header h3">
+                        The quick custom search
+                        (<a class="link-light"
+                        href="https://cse.google.com"
+                        target="_blank"
+                        data-bs-toggle="tooltip"
+                        data-bs-placement="top"
+                        data-bs-title="cse.google.com"
+                        >cse</a>) above,
+                        queries all of the following
+                        links at once
+                      </div>
+                      You can also individually select each one below.
+                      <ul>
+                        <li><a href="https://2014.spaceappschallenge.org/awards/"
+                               target="_new"
+                               class="link-light">2014.spaceappschallenge.org/awards/
+                              </a></li>
+                        <li><a href="https://2015.spaceappschallenge.org/awards/"
+                              target="_new"
+                              class="link-light">2015.spaceappschallenge.org/awards/
                             </a></li>
-                      <li><a href="https://2015.spaceappschallenge.org/awards/"
-                            target="_new"
-                            class="link-light">2015.spaceappschallenge.org/awards/
-                          </a></li>
-                      <li><a href="https://2016.spaceappschallenge.org/awards/"
-                             target="_new"
-                             class="link-light">2016.spaceappschallenge.org/awards/
-                            </a></li>
-                      <li><a href="https://2017.spaceappschallenge.org/awards/"
-                             target="_new"
-                             class="link-light">2017.spaceappschallenge.org/awards/
-                            </a></li>
-                      <li><a href="https://2018.spaceappschallenge.org/awards/"
-                             target="_new"
-                             class="link-light">2018.spaceappschallenge.org/awards/
-                            </a></li>
-                      <li><a href="https://2019.spaceappschallenge.org/awards/"
-                             target="_new"
-                             class="link-light">2019.spaceappschallenge.org/awards/
-                            </a></li>
-                      <li><a href="https://2020.spaceappschallenge.org/awards/"
-                             target="_new"
-                             class="link-light">2020.spaceappschallenge.org/awards/
-                            </a></li>
-                      <li><a href="https://2021.spaceappschallenge.org/awards/"
-                             target="_new"
-                             class="link-light">2021.spaceappschallenge.org/awards/
-                            </a></li>
-                      <li><a href="https://2022.spaceappschallenge.org/awards/"
-                             target="_new"
-                             class="link-light">2022.spaceappschallenge.org/awards/
-                            </a></li>
-                    </ul>
+                        <li><a href="https://2016.spaceappschallenge.org/awards/"
+                               target="_new"
+                               class="link-light">2016.spaceappschallenge.org/awards/
+                              </a></li>
+                        <li><a href="https://2017.spaceappschallenge.org/awards/"
+                               target="_new"
+                               class="link-light">2017.spaceappschallenge.org/awards/
+                              </a></li>
+                        <li><a href="https://2018.spaceappschallenge.org/awards/"
+                               target="_new"
+                               class="link-light">2018.spaceappschallenge.org/awards/
+                              </a></li>
+                        <li><a href="https://2019.spaceappschallenge.org/awards/"
+                               target="_new"
+                               class="link-light">2019.spaceappschallenge.org/awards/
+                              </a></li>
+                        <li><a href="https://2020.spaceappschallenge.org/awards/"
+                               target="_new"
+                               class="link-light">2020.spaceappschallenge.org/awards/
+                              </a></li>
+                        <li><a href="https://2021.spaceappschallenge.org/awards/"
+                               target="_new"
+                               class="link-light">2021.spaceappschallenge.org/awards/
+                              </a></li>
+                        <li><a href="https://2022.spaceappschallenge.org/awards/"
+                               target="_new"
+                               class="link-light">2022.spaceappschallenge.org/awards/
+                              </a></li>
+                      </ul>
 
-                    Note that the routes include /awards to capture the winning
-                    proposals.
+                      Note that the routes include /awards to capture the winning
+                      proposals.
 
-                  </div><!-- /card body -->
-                </div><!-- /Quick search links -->
+                    </div><!-- /card body -->
+                  </div><!-- /Quick search links -->
+                </div>
+                <div class="col">
+                  <div class="card text-bg-primary mb-3" style="max-width: 35rem;"> <!-- keyword suggestions -->
+                    <div class="card-body">
 
+                      <div id="quick-search-keywords" class="card-header h3">
+                        Some quick search keywords from the Global winners
+                        category that are likely to return results
+                      </div>
 
-                <div class="card text-bg-primary mb-3" style="max-width: 35rem;"> <!-- keyword suggestions -->
-                  <div class="card-body">
+                      <ul>
+                        <li>asteriod</li>
+                        <li>art</li>
+                        <li>best</li>
+                        <li>data</li>
+                        <li>food</li>
+                        <li>galactic</li>
+                        <li>hardware</li>
+                        <li>honorable</li>
+                        <li>inspiring</li>
+                        <li>lunar</li>
+                        <li>mission</li>
+                        <li>moon</li>
+                        <li>people</li>
+                        <li>planet</li>
+                        <li>robots</li>
+                        <li>science</li>
+                        <li>storytelling</li>
+                        <li>sun</li>
+                        <li>winner</li>
+                      </ul>
 
-                    <div id="quick-search-keywords" class="card-header h3">
-                      Some quick search keywords from the Global winners
-                      category that are likely to return results
-                    </div>
-
-                    <ul>
-                      <li>asteriod</li>
-                      <li>art</li>
-                      <li>best</li>
-                      <li>data</li>
-                      <li>food</li>
-                      <li>galactic</li>
-                      <li>hardware</li>
-                      <li>honorable</li>
-                      <li>inspiring</li>
-                      <li>mission</li>
-                      <li>moon</li>
-                      <li>people</li>
-                      <li>planet</li>
-                      <li>robots</li>
-                      <li>science</li>
-                      <li>storytelling</li>
-                      <li>sun</li>
-                      <li>winner</li>
-                    </ul>
-
-                    <p>It appears that the quick search does not allow for multiple
-                      search parameters, such as finding a <em>keyword</em> and the
-                      teams with a <em>github</em> proposal.
-                  </p>
-                  </div><!-- /card body -->
-                </div><!-- /keyword suggestions -->
-
+                      <p>It appears that the quick search does not allow for multiple
+                        search parameters, such as finding a <em>keyword</em> and the
+                        teams with a <em>github</em> proposal.
+                    </p>
+                    </div><!-- /card body -->
+                  </div><!-- /keyword suggestions -->
+                </div>
+              </div><!--  /row -->
+            </div>
 
 
 
             <hr>
 
-            <div class="card text-bg-primary mb-3" style="max-width: 35rem;"> <!-- advanced search -->
-              <div class="card-body">
 
-                <div id="advanced-search" class="card-header h3">
-                Advanced Search
+            <div class="container">
+              <div class="row">
+                <div class="col">
+                  <div class="card text-bg-primary mb-3" style="max-width: 35rem;"> <!-- advanced search -->
+                    <div class="card-body">
+
+                      <div id="advanced-search" class="card-header h3">
+                      Advanced Search
+                      </div>
+
+                      <p>Several general search engines can be queried with advanced
+                        parameters, such as
+                        <a class="link-light"
+                           href="https://www.google.com/advanced_search"
+                           target="_blank">Google</a>,
+                        <a class="link-light"
+                           href="https://help.duckduckgo.com/duckduckgo-help-pages/results/syntax/"
+                           target="_blank">
+                           DuckDuckGo</a>,
+                        <a class="link-light"
+                           href="https://www.howtogeek.com/106751/how-to-use-bings-advanced-search-operators-8-tips-for-better-searches/"
+                           target="_blank">
+                           Bing</a>.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="card text-bg-primary mb-3" style="max-width: 35rem;"> <!-- example advance queries on google -->
+                    <div class="card-body">
+                      <div id="advanced-search" class="card-header h3">
+                            Example advanced queries on Google
+                      </div>
+
+                      <div class="mt-3"> Find <em>winner</em> in the 2021 challenge with
+                                      a Github solution. Note that winner is singular
+                                      because that is how each winning team is listed.
+                                      &nbsp;&nbsp;
+                                      <a href="https://www.google.com/search?q=site%3Ahttps%3A%2F%2F2021.spaceappschallenge.org%2F++%22winner%22+%22github.com%22&lr=&safe=images&as_qdr=all&biw=1415&bih=873&ei=90kNY6ToDKjA0PEPtoW6qAg&ved=0ahUKEwjkv4GvmO35AhUoIDQIHbaCDoUQ4dUDCA0&uact=5&oq=site%3Ahttps%3A%2F%2F2019.spaceappschallenge.org%2F++%22winner%22+%22github.com%22&gs_lcp=Cgdnd3Mtd2l6EANKBAhBGAFKBAhGGABQtwhY5RNg_SFoAXAAeACAAUyIAd0BkgEBNJgBAKABAcABAQ&sclient=gws-wiz"
+                                         target="_blank">
+                                        <img data-bs-toggle="tooltip"
+                                             data-bs-placement="top"
+                                             data-bs-title="Search on Google"
+                                             src="assets/icons/google.png"
+                                             alt="Google Search"
+                                             style="width:25px;height:25px;">
+                                      </a>
+                      </div>
+
+                      <code class="h5 link-dark">
+                        site:https://2021.spaceappschallenge.org "winner" "github.com"
+                      </code>
+
+                      <div class="mt-3"> For more results find <em>nominee</em> in the 2021 challenge
+                        with a Github solution.
+                        <a href="https://www.google.com/search?q=site:https://2021.spaceappschallenge.org/+%22nominee%22+%22github.com%22&lr=&safe=images&as_qdr=all&ei=e0sNY6bgCeC90PEPmLOo6A8&start=30&sa=N&ved=2ahUKEwjmiYDome35AhXgHjQIHZgZCv0Q8tMDegQIARA9&biw=1415&bih=873&dpr=1"
+                           target="_blank">
+                          <img data-bs-toggle="tooltip"
+                        data-bs-placement="top"
+                        data-bs-title="Search on Google"
+                        src="assets/icons/google.png"
+                        alt="Google Search"
+                          style="width:25px;height:25px;">
+                        </a>
+
+                      </div>
+
+                      <code class="h5 link-dark">
+                      site:https://2021.spaceappschallenge.org "nominee" "github.com"
+                      </code>
+
+                      <div class="mt-3"> For the most results,  find all entries in the 2021 challenge
+                        with a Github solution.
+                        <a href="https://www.google.com/search?q=site%3Ahttps%3A%2F%2F2021.spaceappschallenge.org%2F++%22github.com%22&lr=&safe=images&as_qdr=all&biw=1415&bih=873&ei=hksNY5z7BeSH0PEPq96b0Ak&ved=0ahUKEwic1pvtme35AhXkAzQIHSvvBpo4HhDh1QMIDQ&uact=5&oq=site%3Ahttps%3A%2F%2F2021.spaceappschallenge.org%2F++%22github.com%22&gs_lcp=Cgdnd3Mtd2l6EANKBAhBGAFKBAhGGABQpwVYxRlg5iloAXAAeACAAY8BiAGtBJIBAzguMZgBAKABAcABAQ&sclient=gws-wiz"
+                           target="_blank">
+                          <img data-bs-toggle="tooltip"
+                          data-bs-placement="top"
+                          data-bs-title="Search on Google"
+                          src="assets/icons/google.png"
+                          alt="Google Search"
+                          style="width:25px;height:25px;">
+                        </a>
+                      </div>
+
+                      <code class="h5 link-dark">
+                      site:https://2021.spaceappschallenge.org "github.com"
+                      </code>
+
+                      <div class="mt-3"> Or maybe,  find all winners in the 2021
+                        challenge with a YouTube presentation.
+                        <a href="https://www.google.com/search?q=site%3Ahttps%3A%2F%2F2020.spaceappschallenge.org%2F++%22winner%22+%22youtube%22+OR+%22youtu.be%22&lr=&safe=images&as_qdr=all&biw=1415&bih=873&ei=PU0NY8XMO4Kr0PEPhsGuiAM&ved=0ahUKEwiF3_u-m-35AhWCFTQIHYagCzEQ4dUDCA0&oq=site%3Ahttps%3A%2F%2F2020.spaceappschallenge.org%2F++%22winner%22+%22youtube%22+OR+%22youtu.be%22&gs_lcp=Cgdnd3Mtd2l6EAxKBAhBGAFKBAhGGABQAFgAYPX7A2gCcAB4AIABAIgBAJIBAJgBAMABAQ&sclient=gws-wiz"
+                           target="_blank">
+                          <img data-bs-toggle="tooltip"
+                          data-bs-placement="top"
+                          data-bs-title="Search on Google"
+                          src="assets/icons/google.png"
+                          alt="Google Search"
+                          style="width:25px;height:25px;">
+                        </a>
+
+                      </div>
+
+                      <code class="h5 link-dark">
+                      site:https://2021.spaceappschallenge.org  "winner" "youtube" OR "youtu.be"
+                      </code>
+
+                      <p class="mt-3">It is curious that the Google quick search can
+                      query across multiple url's with the help of the
+                      <a class="link-light" href="https://cse.google.com" target="_blank">
+                        cse</a>,
+                      and the advanced search can search in depth on only one url.
+                      Note that in the examples above the path does not have the
+                      /awards route which allows for a broader search refined by
+                      additional keywords.
+                      </p>
+
+                    </div> <!-- /card body -->
+                  </div> <!-- /example advance queries on google -->
+
                 </div>
+                <div class="col">
+                  <div class="card text-bg-primary mb-3" style="max-width: 35rem;"> <!-- example advance queries on duckduckgo -->
+                    <div class="card-body">
+                      <div id="advanced-search" class="card-header h3">
+                            Example advanced queries on DuckDuckGo
+                      </div>
 
-                <p>Several general search engines can be queried with advanced
-                  parameters, such as
-                  <a class="link-light"
-                     href="https://www.google.com/advanced_search"
-                     target="_blank">Google</a>,
-                  <a class="link-light"
-                     href="https://help.duckduckgo.com/duckduckgo-help-pages/results/syntax/"
-                     target="_blank">
-                     DuckDuckGo</a>,
-                  <a class="link-light"
-                     href="https://www.howtogeek.com/106751/how-to-use-bings-advanced-search-operators-8-tips-for-better-searches/"
-                     target="_blank">
-                     Bing</a>.
-                </p>
-              </div>
+                      <div class="alert alert-warning" role="alert">
+                        As of 8/30/2022 these queries are returning no
+                        results!
+                      </div>
+
+                      <div class="mt-3"> Find <em>winner</em> in the 2021 challenge with
+                                      a Github solution. Note that winner is singular
+                                      because that is how each winning team is listed.
+                                      &nbsp;&nbsp;
+                                      <a href="https://duckduckgo.com/?q=site%3Ahttps%3A%2F%2F2021.spaceappschallenge.org+%22winner%22+%22github.com%22&t=ffsb&ia=web"
+                                         target="_blank">
+                                        <img data-bs-toggle="tooltip"
+                                             data-bs-placement="top"
+                                             data-bs-title="Search on DuckDuckGo"
+                                             src="assets/icons/duckduckgo.png"
+                                             alt="DuckDuckGo Search"
+                                             style="width:25px;height:25px;">
+                                      </a>
+
+                      </div>
+
+                      <code class="h5 link-dark">
+                        site:https://2021.spaceappschallenge.org "winner" "github.com"
+                      </code>
+
+                      <div class="mt-3"> For more results find <em>nominee</em> in the 2021 challenge
+                        with a Github solution.
+                        <a href="https://duckduckgo.com/?q=site%3Ahttps%3A%2F%2F2021.spaceappschallenge.org+%22nominee%22+%22github.com%22&t=ffsb&ia=web"
+                           target="_blank">
+                          <img data-bs-toggle="tooltip"
+                        data-bs-placement="top"
+                        data-bs-title="Search on DuckDuckGo"
+                        src="assets/icons/duckduckgo.png"
+                        alt="DuckDuckGo Search"
+                          style="width:25px;height:25px;">
+                        </a>
+
+                      </div>
+
+                      <code class="h5 link-dark">
+                      site:https://2021.spaceappschallenge.org "nominee" "github.com"
+                      </code>
+
+                      <div class="mt-3"> For the most results,  find all entries in the 2021 challenge
+                        with a Github solution.
+                        <a href="https://duckduckgo.com/?q=site%3Ahttps%3A%2F%2F2021.spaceappschallenge.org+%22github.com%22&t=ffsb&ia=web"
+                           target="_blank">
+                          <img data-bs-toggle="tooltip"
+                          data-bs-placement="top"
+                          data-bs-title="Search on DuckDuckGo"
+                          src="assets/icons/duckduckgo.png"
+                          alt="DuckDuckGo Search"
+                          style="width:25px;height:25px;">
+                        </a>
+                      </div>
+
+                      <code class="h5 link-dark">
+                      site:https://2021.spaceappschallenge.org "github.com"
+                      </code>
+
+                      <div class="mt-3"> Or maybe,  find all winners in the 2021
+                        challenge with a YouTube presentation.
+                        <a href="https://duckduckgo.com/?q=site%3Ahttps%3A%2F%2F2021.spaceappschallenge.org+%22winner%22+%22youtube%22+OR+%22youtu.be%22&t=ffsb&ia=web"
+                           target="_blank">
+                          <img data-bs-toggle="tooltip"
+                          data-bs-placement="top"
+                          data-bs-title="Search on DuckDuckGo"
+                          src="assets/icons/duckduckgo.png"
+                          alt="DuckDuckGo Search"
+                          style="width:25px;height:25px;">
+                        </a>
+
+                      </div>
+
+                      <code class="h5 link-dark">
+                      site:https://2021.spaceappschallenge.org  "winner" "youtube" OR "youtu.be"
+                      </code>
+
+                      <div class="alert alert-danger" role="alert">
+                        As of 8/30/2022 the last query is returning erroneous
+                        results!
+                      </div>
+
+                    </div> <!-- /card body -->
+                  </div> <!-- /example advance queries on duckduckgo -->
+
+                  <div class="card text-bg-primary mb-3" style="max-width: 35rem;"> <!-- example advance queries on bing -->
+                    <div class="card-body">
+                      <div id="advanced-search" class="card-header h3">
+                            Example advanced queries on Bing
+                      </div>
+
+                      <div class="alert alert-warning" role="alert">
+                        As of 9/1/2022 these queries are returning no
+                        results!
+                      </div>
+
+
+                      <div class="mt-3"> Find <em>winner</em> in the 2021 challenge with
+                                      a Github solution. Note that winner is singular
+                                      because that is how each winning team is listed.
+                                      &nbsp;&nbsp;
+                                      <a href="https://www.bing.com/search?q=site%3Ahttps%3A%2F%2F2021.spaceappschallenge.org+%22winner%22+%22github.com%22&qs=n&form=QBRE&sp=-1&pq=site%3Ahttps%3A%2F%2F2021.spaceappschallenge.org+%22winner%22+%22github.com%22&sc=0-62&sk=&cvid=0992240303044E3096E3FCC42F027F9B&ghsh=0&ghacc=0&ghpl="
+                                         target="_blank">
+                                        <img data-bs-toggle="tooltip"
+                                             data-bs-placement="top"
+                                             data-bs-title="Search on Bing"
+                                             src="assets/icons/bing.png"
+                                             alt="Bing Search"
+                                             style="width:25px;height:25px;">
+                                      </a>
+
+                      </div>
+
+                      <code class="h5 link-dark">
+                        site:https://2021.spaceappschallenge.org "winner" "github.com"
+                      </code>
+
+                      <div class="mt-3"> For more results find <em>nominee</em> in the 2021 challenge
+                        with a Github solution.
+                        <a href="https://www.bing.com/search?q=site%3Ahttps%3A%2F%2F2021.spaceappschallenge.org+%22nominee%22+%22github.com%22&qs=n&form=QBRE&sp=-1&pq=site%3Ahttps%3A%2F%2F2021.spaceappschallenge.org+%22nominee%22+%22github.com%22&sc=0-63&sk=&cvid=80F7310E032D46998D9189788178B6CD&ghsh=0&ghacc=0&ghpl="
+                           target="_blank">
+                          <img data-bs-toggle="tooltip"
+                        data-bs-placement="top"
+                        data-bs-title="Search on Bing"
+                        src="assets/icons/bing.png"
+                        alt="Bing Search"
+                          style="width:25px;height:25px;">
+                        </a>
+
+                      </div>
+
+                      <code class="h5 link-dark">
+                      site:https://2021.spaceappschallenge.org "nominee" "github.com"
+                      </code>
+
+                      <div class="mt-3"> For the most results,  find all entries in
+                        the 2021 challenge with a Github solution.
+                        <a href="https://www.bing.com/search?q=site%3Ahttps%3A%2F%2F2021.spaceappschallenge.org+%22github.com%22&qs=n&form=QBRE&sp=-1&pq=site%3Ahttps%3A%2F%2F2021.spaceappschallenge.org+%22github.com%22&sc=0-53&sk=&cvid=62A39B7394774B8FB3E9A48065414FE2&ghsh=0&ghacc=0&ghpl="
+                           target="_blank">
+                          <img data-bs-toggle="tooltip"
+                          data-bs-placement="top"
+                          data-bs-title="Search on Bing"
+                          src="assets/icons/bing.png"
+                          alt="Bing Search"
+                          style="width:25px;height:25px;">
+                        </a>
+                      </div>
+
+                      <code class="h5 link-dark">
+                      site:https://2021.spaceappschallenge.org "github.com"
+                      </code>
+
+                      <div class="mt-3"> Or maybe,  find all winners in the 2021
+                        challenge with a YouTube presentation.
+                        <a href="https://www.bing.com/search?form=MOZSBR&pc=MOZI&q=site%3Ahttps%3A%2F%2F2021.spaceappschallenge.org+%22winner%22+%22youtube%22+OR+%22youtu.be%22"
+                           target="_blank">
+                          <img data-bs-toggle="tooltip"
+                          data-bs-placement="top"
+                          data-bs-title="Search on Bing"
+                          src="assets/icons/bing.png"
+                          alt="Bing Search"
+                          style="width:25px;height:25px;">
+                        </a>
+
+                      </div>
+
+                      <code class="h5 link-dark">
+                      site:https://2021.spaceappschallenge.org  "winner" "youtube" OR "youtu.be"
+                      </code>
+
+                      <div class="alert alert-danger" role="alert">
+                        As of 9/1/2022 the last query is returning erroneous
+                        results!
+                      </div>
+
+                    </div> <!-- /card body -->
+                  </div> <!-- /example advance queries on bing -->
+
+
+
+                </div>
+              </div><!-- /row -->
             </div>
-
-            <div class="card text-bg-primary mb-3" style="max-width: 35rem;"> <!-- example advance queries on google -->
-              <div class="card-body">
-                <div id="advanced-search" class="card-header h3">
-                      Example advanced queries on Google
-                </div>
-
-                <div class="mt-3"> Find <em>winner</em> in the 2021 challenge with
-                                a Github solution. Note that winner is singular
-                                because that is how each winning team is listed.
-                                &nbsp;&nbsp;
-                                <a href="https://www.google.com/search?q=site%3Ahttps%3A%2F%2F2021.spaceappschallenge.org%2F++%22winner%22+%22github.com%22&lr=&safe=images&as_qdr=all&biw=1415&bih=873&ei=90kNY6ToDKjA0PEPtoW6qAg&ved=0ahUKEwjkv4GvmO35AhUoIDQIHbaCDoUQ4dUDCA0&uact=5&oq=site%3Ahttps%3A%2F%2F2019.spaceappschallenge.org%2F++%22winner%22+%22github.com%22&gs_lcp=Cgdnd3Mtd2l6EANKBAhBGAFKBAhGGABQtwhY5RNg_SFoAXAAeACAAUyIAd0BkgEBNJgBAKABAcABAQ&sclient=gws-wiz"
-                                   target="_blank">
-                                  <img data-bs-toggle="tooltip"
-                                       data-bs-placement="top"
-                                       data-bs-title="Search on Google"
-                                       src="assets/icons/google.png"
-                                       alt="Google Search"
-                                       style="width:25px;height:25px;">
-                                </a>
-                </div>
-
-                <code class="h5 link-dark">
-                  site:https://2021.spaceappschallenge.org "winner" "github.com"
-                </code>
-
-                <div class="mt-3"> For more results find <em>nominee</em> in the 2021 challenge
-                  with a Github solution.
-                  <a href="https://www.google.com/search?q=site:https://2021.spaceappschallenge.org/+%22nominee%22+%22github.com%22&lr=&safe=images&as_qdr=all&ei=e0sNY6bgCeC90PEPmLOo6A8&start=30&sa=N&ved=2ahUKEwjmiYDome35AhXgHjQIHZgZCv0Q8tMDegQIARA9&biw=1415&bih=873&dpr=1"
-                     target="_blank">
-                    <img data-bs-toggle="tooltip"
-                  data-bs-placement="top"
-                  data-bs-title="Search on Google"
-                  src="assets/icons/google.png"
-                  alt="Google Search"
-                    style="width:25px;height:25px;">
-                  </a>
-
-                </div>
-
-                <code class="h5 link-dark">
-                site:https://2021.spaceappschallenge.org "nominee" "github.com"
-                </code>
-
-                <div class="mt-3"> For the most results,  find all entries in the 2021 challenge
-                  with a Github solution.
-                  <a href="https://www.google.com/search?q=site%3Ahttps%3A%2F%2F2021.spaceappschallenge.org%2F++%22github.com%22&lr=&safe=images&as_qdr=all&biw=1415&bih=873&ei=hksNY5z7BeSH0PEPq96b0Ak&ved=0ahUKEwic1pvtme35AhXkAzQIHSvvBpo4HhDh1QMIDQ&uact=5&oq=site%3Ahttps%3A%2F%2F2021.spaceappschallenge.org%2F++%22github.com%22&gs_lcp=Cgdnd3Mtd2l6EANKBAhBGAFKBAhGGABQpwVYxRlg5iloAXAAeACAAY8BiAGtBJIBAzguMZgBAKABAcABAQ&sclient=gws-wiz"
-                     target="_blank">
-                    <img data-bs-toggle="tooltip"
-                    data-bs-placement="top"
-                    data-bs-title="Search on Google"
-                    src="assets/icons/google.png"
-                    alt="Google Search"
-                    style="width:25px;height:25px;">
-                  </a>
-                </div>
-
-                <code class="h5 link-dark">
-                site:https://2021.spaceappschallenge.org "github.com"
-                </code>
-
-                <div class="mt-3"> Or maybe,  find all winners in the 2021
-                  challenge with a YouTube presentation.
-                  <a href="https://www.google.com/search?q=site%3Ahttps%3A%2F%2F2020.spaceappschallenge.org%2F++%22winner%22+%22youtube%22+OR+%22youtu.be%22&lr=&safe=images&as_qdr=all&biw=1415&bih=873&ei=PU0NY8XMO4Kr0PEPhsGuiAM&ved=0ahUKEwiF3_u-m-35AhWCFTQIHYagCzEQ4dUDCA0&oq=site%3Ahttps%3A%2F%2F2020.spaceappschallenge.org%2F++%22winner%22+%22youtube%22+OR+%22youtu.be%22&gs_lcp=Cgdnd3Mtd2l6EAxKBAhBGAFKBAhGGABQAFgAYPX7A2gCcAB4AIABAIgBAJIBAJgBAMABAQ&sclient=gws-wiz"
-                     target="_blank">
-                    <img data-bs-toggle="tooltip"
-                    data-bs-placement="top"
-                    data-bs-title="Search on Google"
-                    src="assets/icons/google.png"
-                    alt="Google Search"
-                    style="width:25px;height:25px;">
-                  </a>
-
-                </div>
-
-                <code class="h5 link-dark">
-                site:https://2021.spaceappschallenge.org  "winner" "youtube" OR "youtu.be"
-                </code>
-
-                <p class="mt-3">It is curious that the Google quick search can
-                query across multiple url's with the help of the
-                <a class="link-light" href="https://cse.google.com" target="_blank">
-                  cse</a>,
-                and the advanced search can search in depth on only one url.
-                Note that in the examples above the path does not have the
-                /awards route which allows for a broader search refined by
-                additional keywords.
-                </p>
-
-              </div> <!-- /card body -->
-            </div> <!-- /example advance queries on google -->
-
-
-
-
-            <!-- # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # -->
-            <div class="card text-bg-primary mb-3" style="max-width: 35rem;"> <!-- example advance queries on duckduckgo -->
-              <div class="card-body">
-                <div id="advanced-search" class="card-header h3">
-                      Example advanced queries on DuckDuckGo
-                </div>
-
-                <div class="alert alert-warning" role="alert">
-                  As of 8/30/2022 these queries are returning no
-                  results!
-                </div>
-
-                <div class="mt-3"> Find <em>winner</em> in the 2021 challenge with
-                                a Github solution. Note that winner is singular
-                                because that is how each winning team is listed.
-                                &nbsp;&nbsp;
-                                <a href="https://duckduckgo.com/?q=site%3Ahttps%3A%2F%2F2021.spaceappschallenge.org+%22winner%22+%22github.com%22&t=ffsb&ia=web"
-                                   target="_blank">
-                                  <img data-bs-toggle="tooltip"
-                                       data-bs-placement="top"
-                                       data-bs-title="Search on DuckDuckGo"
-                                       src="assets/icons/duckduckgo.png"
-                                       alt="DuckDuckGo Search"
-                                       style="width:25px;height:25px;">
-                                </a>
-
-                </div>
-
-                <code class="h5 link-dark">
-                  site:https://2021.spaceappschallenge.org "winner" "github.com"
-                </code>
-
-                <div class="mt-3"> For more results find <em>nominee</em> in the 2021 challenge
-                  with a Github solution.
-                  <a href="https://duckduckgo.com/?q=site%3Ahttps%3A%2F%2F2021.spaceappschallenge.org+%22nominee%22+%22github.com%22&t=ffsb&ia=web"
-                     target="_blank">
-                    <img data-bs-toggle="tooltip"
-                  data-bs-placement="top"
-                  data-bs-title="Search on DuckDuckGo"
-                  src="assets/icons/duckduckgo.png"
-                  alt="DuckDuckGo Search"
-                    style="width:25px;height:25px;">
-                  </a>
-
-                </div>
-
-                <code class="h5 link-dark">
-                site:https://2021.spaceappschallenge.org "nominee" "github.com"
-                </code>
-
-                <div class="mt-3"> For the most results,  find all entries in the 2021 challenge
-                  with a Github solution.
-                  <a href="https://duckduckgo.com/?q=site%3Ahttps%3A%2F%2F2021.spaceappschallenge.org+%22github.com%22&t=ffsb&ia=web"
-                     target="_blank">
-                    <img data-bs-toggle="tooltip"
-                    data-bs-placement="top"
-                    data-bs-title="Search on DuckDuckGo"
-                    src="assets/icons/duckduckgo.png"
-                    alt="DuckDuckGo Search"
-                    style="width:25px;height:25px;">
-                  </a>
-                </div>
-
-                <code class="h5 link-dark">
-                site:https://2021.spaceappschallenge.org "github.com"
-                </code>
-
-                <div class="mt-3"> Or maybe,  find all winners in the 2021
-                  challenge with a YouTube presentation.
-                  <a href="https://duckduckgo.com/?q=site%3Ahttps%3A%2F%2F2021.spaceappschallenge.org+%22winner%22+%22youtube%22+OR+%22youtu.be%22&t=ffsb&ia=web"
-                     target="_blank">
-                    <img data-bs-toggle="tooltip"
-                    data-bs-placement="top"
-                    data-bs-title="Search on DuckDuckGo"
-                    src="assets/icons/duckduckgo.png"
-                    alt="DuckDuckGo Search"
-                    style="width:25px;height:25px;">
-                  </a>
-
-                </div>
-
-                <code class="h5 link-dark">
-                site:https://2021.spaceappschallenge.org  "winner" "youtube" OR "youtu.be"
-                </code>
-
-                <div class="alert alert-danger" role="alert">
-                  As of 8/30/2022 the last query is returning erroneous
-                  results!
-                </div>
-
-              </div> <!-- /card body -->
-            </div> <!-- /example advance queries on duckduckgo -->
-
-
-
-            <!-- # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # -->
-            <div class="card text-bg-primary mb-3" style="max-width: 35rem;"> <!-- example advance queries on bing -->
-              <div class="card-body">
-                <div id="advanced-search" class="card-header h3">
-                      Example advanced queries on Bing
-                </div>
-
-                <div class="alert alert-warning" role="alert">
-                  As of 9/1/2022 these queries are returning no
-                  results!
-                </div>
-
-
-                <div class="mt-3"> Find <em>winner</em> in the 2021 challenge with
-                                a Github solution. Note that winner is singular
-                                because that is how each winning team is listed.
-                                &nbsp;&nbsp;
-                                <a href="https://www.bing.com/search?q=site%3Ahttps%3A%2F%2F2021.spaceappschallenge.org+%22winner%22+%22github.com%22&qs=n&form=QBRE&sp=-1&pq=site%3Ahttps%3A%2F%2F2021.spaceappschallenge.org+%22winner%22+%22github.com%22&sc=0-62&sk=&cvid=0992240303044E3096E3FCC42F027F9B&ghsh=0&ghacc=0&ghpl="
-                                   target="_blank">
-                                  <img data-bs-toggle="tooltip"
-                                       data-bs-placement="top"
-                                       data-bs-title="Search on Bing"
-                                       src="assets/icons/bing.png"
-                                       alt="Bing Search"
-                                       style="width:25px;height:25px;">
-                                </a>
-
-                </div>
-
-                <code class="h5 link-dark">
-                  site:https://2021.spaceappschallenge.org "winner" "github.com"
-                </code>
-
-                <div class="mt-3"> For more results find <em>nominee</em> in the 2021 challenge
-                  with a Github solution.
-                  <a href="https://www.bing.com/search?q=site%3Ahttps%3A%2F%2F2021.spaceappschallenge.org+%22nominee%22+%22github.com%22&qs=n&form=QBRE&sp=-1&pq=site%3Ahttps%3A%2F%2F2021.spaceappschallenge.org+%22nominee%22+%22github.com%22&sc=0-63&sk=&cvid=80F7310E032D46998D9189788178B6CD&ghsh=0&ghacc=0&ghpl="
-                     target="_blank">
-                    <img data-bs-toggle="tooltip"
-                  data-bs-placement="top"
-                  data-bs-title="Search on Bing"
-                  src="assets/icons/bing.png"
-                  alt="Bing Search"
-                    style="width:25px;height:25px;">
-                  </a>
-
-                </div>
-
-                <code class="h5 link-dark">
-                site:https://2021.spaceappschallenge.org "nominee" "github.com"
-                </code>
-
-                <div class="mt-3"> For the most results,  find all entries in
-                  the 2021 challenge with a Github solution.
-                  <a href="https://www.bing.com/search?q=site%3Ahttps%3A%2F%2F2021.spaceappschallenge.org+%22github.com%22&qs=n&form=QBRE&sp=-1&pq=site%3Ahttps%3A%2F%2F2021.spaceappschallenge.org+%22github.com%22&sc=0-53&sk=&cvid=62A39B7394774B8FB3E9A48065414FE2&ghsh=0&ghacc=0&ghpl="
-                     target="_blank">
-                    <img data-bs-toggle="tooltip"
-                    data-bs-placement="top"
-                    data-bs-title="Search on Bing"
-                    src="assets/icons/bing.png"
-                    alt="Bing Search"
-                    style="width:25px;height:25px;">
-                  </a>
-                </div>
-
-                <code class="h5 link-dark">
-                site:https://2021.spaceappschallenge.org "github.com"
-                </code>
-
-                <div class="mt-3"> Or maybe,  find all winners in the 2021
-                  challenge with a YouTube presentation.
-                  <a href="https://www.bing.com/search?form=MOZSBR&pc=MOZI&q=site%3Ahttps%3A%2F%2F2021.spaceappschallenge.org+%22winner%22+%22youtube%22+OR+%22youtu.be%22"
-                     target="_blank">
-                    <img data-bs-toggle="tooltip"
-                    data-bs-placement="top"
-                    data-bs-title="Search on Bing"
-                    src="assets/icons/bing.png"
-                    alt="Bing Search"
-                    style="width:25px;height:25px;">
-                  </a>
-
-                </div>
-
-                <code class="h5 link-dark">
-                site:https://2021.spaceappschallenge.org  "winner" "youtube" OR "youtu.be"
-                </code>
-
-                <div class="alert alert-danger" role="alert">
-                  As of 9/1/2022 the last query is returning erroneous
-                  results!
-                </div>
-
-              </div> <!-- /card body -->
-            </div> <!-- /example advance queries on bing -->
-
-
-
       </article>
+
+      <!-- Back to top button -->
+      <!-- https://mdbootstrap.com/docs/standard/extended/back-to-top/ -->
+      <button
+              type="button"
+              class="btn btn-danger btn-floating btn-lg"
+              id="btn-back-to-top"
+              >
+              <div class="h3">^</div>
+      </button>
+
     </main>
 
 
 
 
+
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+
     <script>
       const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
       const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
     </script>
 
+
+
+    <script>
+      // https://mdbootstrap.com/docs/standard/extended/back-to-top/
+
+      //Get the button
+      let mybutton = document.getElementById("btn-back-to-top");
+
+      // When the user scrolls down 20px from the top of the document, show the button
+      window.onscroll = function () {
+        scrollFunction();
+      };
+
+      function scrollFunction() {
+        if (
+          document.body.scrollTop > 20 ||
+          document.documentElement.scrollTop > 20
+        ) {
+          mybutton.style.display = "block";
+        } else {
+          mybutton.style.display = "none";
+        }
+      }
+      // When the user clicks on the button, scroll to the top of the document
+      mybutton.addEventListener("click", backToTop);
+
+      function backToTop() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+      }
+    </script>
 
   </body>
 </html>
